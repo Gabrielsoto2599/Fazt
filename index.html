@@ -2,93 +2,67 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="style.css" rel="stylesheet">
-    <title>Mi Primera Landing Page | Gabriel Soto</title>
+    <title>Fazt | Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Stint+Ultra+Condensed|Roboto+Condensed:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">
 </head>
-
 <body>
-    <div class="container-form register">
-        <img src="3.jpg" alt="Fondo de pantalla" title="Fondo">
 
-        <div class="information">
-            <div class="info-childs">
-                <div class="content-text">
-                    <h2>Bienvenido</h2>
-                    <p>Para unirte a nuestra comunidad, por favor inicia sesión con tus datos.</p>
-                    <input type="button" value="Iniciar Sesión" id="sing-in">
-                </div>
-            </div>
+    <header class="header">
+        <img src="logo.png" alt="Fazt Logo">
+    </header>
 
-            <div class="form-information">
-                <div class="form-information-childs">
-                    <h2>Crear una Cuenta</h2>
-                    <div class="icons">
-                        <i class='bx bxl-google'></i>
-                        <i class='bx bxl-github'></i>
-                        <i class='bx bxl-linkedin'></i>
-                    </div>
-                    <p>o usa tu email para registrarte</p>
-                    <form class="form">
-                        <label>
-                            <i class='bx bx-user'></i>
-                            <input type="text" placeholder="Nombres y Apellidos">
-                        </label>
-                        <label>
-                            <i class='bx bx-envelope'></i>
-                            <input type="email" placeholder="Correo electrónico">
-                        </label>
-                        <label>
-                            <i class='bx bx-lock-alt'></i>
-                            <input type="password" placeholder="Contraseña">
-                        </label>
-                        <input type="submit" value="Registrarse">
-                    </form>
-                </div>
-            </div>
+    <nav class="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Quienes Somos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#tarifas">Tarifas</a>
+        <a href="#mapa">Localización</a>
+    </nav>
+
+    <section id="nosotros" class="content">
+        <h2 class="title">Quienes Somos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </section>
+      
+    <section id="servicios" class="content bg-light">
+        <h2 class="title">Servicios</h2>
+        <ul class="image-container">
+            <li>
+                <figure>
+                    <img src="ico1.jpg" alt="Angular">
+                    <figcaption>Angular</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="ico2.jpg" alt="React">
+                    <figcaption>React</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="ico3.png" alt="Vuejs">
+                    <figcaption>Vuejs</figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+   
+    <section id="tarifas" class="content">
+        <h2 class="title">Tarifas</h2>
+        <div class="tarifas-texto">
+            <p>Ofrecemos los mejores planes para tu desarrollo web, adaptados a tus necesidades y presupuesto.</p>
         </div>
-    </div>
+        <a href="mailto:contacto@ejemplo.com" class="btn">Contáctanos</a>
+    </section>
 
-    <div class="container-form login hide">
-        <div class="information">
-            <div class="info-childs">
-                <div class="content-text">
-                    <h2>¡Bienvenido Nuevamente!</h2>
-                    <p>Si aún no tienes cuenta, regístrate para disfrutar de todos nuestros servicios.</p>
-                    <input type="button" value="Registrarse" id="sing-up">
-                </div>
-            </div>
+    <section id="mapa" class="content bg-light">
+        <h2 class="title">Localización</h2>
+        <figure class="map">
+            <img src="dummy-mapa.jpg" alt="Mapa de ubicación">
+        </figure>
+    </section>
 
-            <div class="form-information">
-                <div class="form-information-childs">
-                    <h2>Iniciar Sesión</h2>
-                    <div class="icons">
-                        <i class='bx bxl-google'></i>
-                        <i class='bx bxl-github'></i>
-                        <i class='bx bxl-linkedin'></i>
-                    </div>
-                    <p>o inicia sesión con tu cuenta</p>
-                    <form class="form">
-                        <label>
-                            <i class='bx bx-envelope'></i>
-                            <input type="email" placeholder="Correo electrónico">
-                        </label>
-                        <label>
-                            <i class='bx bx-lock-alt'></i>
-                            <input type="password" placeholder="Contraseña">
-                        </label>
-                        <input type="submit" value="Iniciar Sesión">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

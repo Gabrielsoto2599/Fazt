@@ -11,14 +11,15 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f0f2f5; /* Un gris muy suave de fondo */
+    background-color: #f0f2f5;
+    padding: 20px; /* Para que no toque los bordes en móvil */
 }
 
 /* Contenedor Principal */
 .container-form {
     display: flex;
-    width: 800px;
-    height: 500px;
+    width: 900px; /* Un poco más ancho para que respire */
+    height: 550px;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -26,37 +27,58 @@ body {
     position: relative;
 }
 
-/* Imagen de fondo lateral */
-.container-form img {
-    width: 50%;
+/* Imagen lateral fija */
+.container-form > img {
+    width: 45%; /* Reducido un poco para dar espacio al texto */
     object-fit: cover;
 }
 
-/* Sección de información (Texto lateral) */
+/* Contenedor de la info y formularios */
 .information {
-    width: 50%;
+    width: 55%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    background-color: #4e73df; /* Color azul profesional */
-    color: white;
-    text-align: center;
+    flex-direction: column;
+    position: relative;
 }
 
-/* Formulario */
-.form-information {
-    width: 50%;
+/* Ajuste para que los hijos ocupen todo el espacio */
+.info-childs, .form-information {
+    width: 100%;
     padding: 40px;
+}
+
+/* Estilo para la parte azul (Bienvenida) */
+.info-childs {
+    background-color: #4e73df;
+    color: white;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.form-information h2 {
-    margin-bottom: 20px;
-    color: #333;
+.info-childs h2 { margin-bottom: 15px; }
+.info-childs p { margin-bottom: 20px; font-weight: 300; }
+
+/* Estilo para la parte blanca (Inputs) */
+.form-information-childs {
+    text-align: center;
 }
+
+.icons {
+    margin: 15px 0;
+}
+
+.icons i {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #4e73df;
+    transition: transform 0.3s;
+}
+
+.icons i:hover { transform: scale(1.2); }
 
 /* Inputs con Iconos */
 label {
@@ -64,8 +86,15 @@ label {
     align-items: center;
     background-color: #f0f2f5;
     margin-bottom: 15px;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border-radius: 10px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+label:focus-within {
+    border-color: #4e73df;
+    background-color: #fff;
 }
 
 label i {
@@ -78,26 +107,40 @@ input {
     background: transparent;
     outline: none;
     width: 100%;
+    font-size: 14px;
 }
 
-/* Botón principal */
-input[type="submit"] {
+/* Botones */
+input[type="submit"], #sing-in, #sing-up {
     background-color: #4e73df;
     color: white;
-    padding: 12px;
+    padding: 12px 30px;
     border-radius: 10px;
     cursor: pointer;
     font-weight: 600;
-    transition: background 0.3s;
+    transition: all 0.3s;
     border: none;
+    margin-top: 10px;
+    width: 100%;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, #sing-in:hover, #sing-up:hover {
     background-color: #2e59d9;
+    box-shadow: 0 5px 15px rgba(78, 115, 223, 0.4);
+}
+
+/* Botones secundarios (los de la parte azul) */
+#sing-in, #sing-up {
+    background: transparent;
+    border: 2px solid white;
+}
+
+#sing-in:hover, #sing-up:hover {
+    background: white;
+    color: #4e73df;
 }
 
 /* Clase para ocultar */
 .hide {
     display: none !important;
 }
-
